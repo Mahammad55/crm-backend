@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://${DB_CONNECTION_IP:localhost}:${DB_CONNECTION_PORT:5437}/${DB_CONNECTION_DATABASE:crm_db}?currentSchema=${DB_CONNECTION_SCHEMA:public}
+    username: ${DB_CONNECTION_USERNAME:postgres}
+    password: ${DB_CONNECTION_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

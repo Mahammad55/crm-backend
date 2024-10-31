@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    enabled: ${LIQUIBASE_ENABLED:true}
+    change-log: classpath:liquibase/changelog-master.yml
+    default-schema: public
+    database-change-log-table: database_changelog
+    database-change-log-lock-table: database_changelog_lock

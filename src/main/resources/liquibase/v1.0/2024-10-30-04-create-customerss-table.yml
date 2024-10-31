@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-10-30-04-01
+      author: mahammad
+      changes:
+        - createTable:
+            tableName: customers
+            remarks: Table to store information about customers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: customer_name
+                  type: VARCHAR(50)
+              - column:
+                  name: company_name
+                  type: VARCHAR(50)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(60)

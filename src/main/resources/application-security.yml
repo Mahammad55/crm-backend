@@ -1,0 +1,11 @@
+security:
+  jwt:
+    accessToken:
+      secret: ${ACCESS_SECRET_KEY:SldUIHRva2VuIHJhbmRvbSBzZWNyZXQga2V5IGdlbmVyYXRpb24uIFBsZWFzZSBjaGFuZ2UgdG9rZW4gaW4gcHJvZHVjdGlvbg==}
+      expiration: ${ACCESS_EXPIRATION:1}
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

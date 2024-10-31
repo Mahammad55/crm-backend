@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: crm-backend
+
+server:
+  port: ${API_SERVER_PORT:8082}
+  servlet:
+    context-path: /crm
+    application-display-name: crm-backend

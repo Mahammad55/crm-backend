@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-10-30-01-01
+      author: mahammad
+      changes:
+        - createTable:
+            tableName: users
+            remarks: Table to store information about users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: firstname
+                  type: VARCHAR(50)
+              - column:
+                  name: lastname
+                  type: VARCHAR(50)
+              - column:
+                  name: email
+                  type: VARCHAR(60)
+                  constraints:
+                    unique: true
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(50)
+              - column:
+                  name: is_account_non_expired
+                  type: BOOLEAN
+              - column:
+                  name: is_account_non_locked
+                  type: BOOLEAN
+              - column:
+                  name: is_credentials_non_expired
+                  type: BOOLEAN
+              - column:
+                  name: is_enabled
+                  type: BOOLEAN
